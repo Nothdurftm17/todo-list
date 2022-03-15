@@ -6,7 +6,7 @@ const Todo = (props) => {
     return (
         <div className=" task d-flex mx-auto" >
             {
-                checked ? <h1><del> Task: {props.task}</del></h1> : <h1>Task: {props.task}</h1>
+                checked ? <h1 className="tasks"><del> Task: {props.task}</del></h1> : <h1 className="tasks">Task: {props.task}</h1>
             }
             <input type="checkbox" checked={checked} onChange={(e)=>{setChecked(e.target.checked)}}/>
             <button onClick={props.onDelete}>Delete</button>

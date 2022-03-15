@@ -17,6 +17,7 @@ body{
   justify-content: space-around;
   margin: 8px;
   border-radius: 10px;
+  word-wrap:break-word;
 }
 
 .tasks{

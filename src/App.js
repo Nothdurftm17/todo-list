@@ -27,8 +27,13 @@ function App() {
       form
     ])
 
-    setForm(" ")
+    setForm({
+      task : " "
+    })
+
+
   }
+
   const onDeleteHandler = (index) => {
     console.log(index);
 
@@ -42,7 +47,7 @@ function App() {
       <h1 className="header">Todo List</h1>
         <form onSubmit={onSubmitHandler}>
         <div className="col-auto">
-            <input onChange={onChangeHandler} type="text" name="task" placeholder="Type the Task" className="input" />
+            <input onChange={onChangeHandler} type="text" name="task" placeholder="Type the Task" className="input" value={form.task} />
         </div>
         <div>
             <input type="submit" className='btn btn-primary btn-lg d-block mx-auto my-2' value="Add" />
